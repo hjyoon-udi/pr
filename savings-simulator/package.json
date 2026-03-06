@@ -1,0 +1,9 @@
+{
+  "name": "savings-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "매월 저축액과 연 이자율을 입력하면 3년, 5년, 10년 후 예상 금액을 계산하는 웹 도구",
+  "scripts": {
+    "start": "echo \"정적 프로젝트입니다. index.html을 브라우저로 직접 여세요.\""
+  }
+}

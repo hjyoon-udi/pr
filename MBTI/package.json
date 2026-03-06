@@ -1,0 +1,10 @@
+{
+  "name": "simple-mbti-checker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "브라우저에서 바로 실행 가능한 간단한 MBTI 성향 체크 웹 페이지",
+  "scripts": {
+    "start": "echo \"정적 프로젝트입니다. index.html을 브라우저로 직접 여세요.\""
+  }
+}
+

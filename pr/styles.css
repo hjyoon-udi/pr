@@ -66,6 +66,21 @@ body {
   box-shadow: var(--shadow);
 }
 
+.avatar-placeholder {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--shadow);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
 .hero-name {
   font-size: 2.5rem;
   font-weight: 700;

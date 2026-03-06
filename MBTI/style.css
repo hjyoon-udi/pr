@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #f9f5ff, #eef2ff 40%, #f9fafb 80%);
+  color: #111827;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 40px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.app-header p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 20px 20px 18px;
+  box-shadow:
+    0 20px 30px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(148, 163, 184, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.card-hidden {
+  display: none;
+}
+
+.question-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.option {
+  position: relative;
+  border-radius: 999px;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  background: rgba(249, 250, 251, 0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    background 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.08s ease;
+}
+
+.option:hover {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.3);
+}
+
+.option.selected {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #f9fafb;
+  border-color: transparent;
+  box-shadow:
+    0 10px 20px rgba(79, 70, 229, 0.45),
+    0 0 0 1px rgba(191, 219, 254, 0.32);
+}
+
+.option input[type="radio"] {
+  display: none;
+}
+
+.option-label {
+  font-size: 0.95rem;
+}
+
+.progress {
+  margin-bottom: 16px;
+}
+
+.progress span {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.progress-bar > div {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+  transition: width 0.2s ease-out;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.btn {
+  flex: 1;
+  border-radius: 999px;
+  border: none;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.16s ease,
+    transform 0.08s ease,
+    box-shadow 0.16s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #f9fafb;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.35);
+}
+
+.btn.primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(79, 70, 229, 0.38);
+}
+
+.btn.secondary {
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.btn.secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.result-type {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.result-type span {
+  color: #4f46e5;
+}
+
+.result-description {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.result-details h3 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.result-details ul {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.result-details li + li {
+  margin-top: 4px;
+}
+
+.history {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.history h3 {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #4b5563;
+}
+
+.history ul {
+  list-style: none;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.history li + li {
+  margin-top: 2px;
+}
+
+.app-footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding-top: 20px;
+  }
+
+  .card {
+    padding: 16px 14px 14px;
+    border-radius: 16px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
